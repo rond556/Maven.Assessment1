@@ -10,12 +10,12 @@ public class BasicStringUtils {
      */
     public static String camelCase(String str) {
         String capitalizedString = "";
-        capitalizedString += 
-        for(int i = 0; i <= str.length() -1; i++){
-            if()
+        String capitalizedLetter = str.substring(0,1).toUpperCase();
+        capitalizedString += capitalizedLetter;
+        for(int i = 1; i <= str.length() -1; i++){
+            capitalizedString += str.charAt(i);
         }
-        return
-                ;
+        return capitalizedString;
     }
 
     /**
@@ -23,7 +23,11 @@ public class BasicStringUtils {
      * @return string with identical contents, in the reverse order
      */
     public static String reverse(String str) {
-        return null;
+        String reversedString = "";
+        for(int i = 0 ; i <= str.length() - 1; i++){
+            reversedString += str.charAt(str.length() - 1 - i);
+        }
+        return reversedString;
     }
 
     /**
@@ -31,7 +35,13 @@ public class BasicStringUtils {
      * @return string with identical contents, in reverse order, with first character capitalized
      */
     public static String reverseThenCamelCase(String str) {
-        return null;
+        String capitalizedReverseString = "";
+        String capitalizedLetter = str.substring(str.length() - 1).toUpperCase();
+        capitalizedReverseString += capitalizedLetter;
+        for(int i = 1; i <= str.length() -1; i++){
+            capitalizedReverseString += str.charAt(str.length() - 1 - i);
+        }
+        return capitalizedReverseString;
     }
 
 
@@ -40,7 +50,10 @@ public class BasicStringUtils {
      * @return string with identical contents excluding first and last character
      */
     public static String removeFirstAndLastCharacter(String str) {
-        return null;
+        String newString = "";
+        for(int i = 1; i <= str.length() - 2; i++)
+            newString += str.charAt(i);
+        return newString;
     }
 
     /**
@@ -48,6 +61,7 @@ public class BasicStringUtils {
      * @return string with identical characters, each with opposite casing
      */
     public static String invertCasing(String str) {
+
         return null;
     }
 }
