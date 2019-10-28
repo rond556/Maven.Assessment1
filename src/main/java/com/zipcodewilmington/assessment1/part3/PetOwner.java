@@ -34,9 +34,6 @@ public class PetOwner {
      * @return true if I own this pet
      */
     public Boolean isOwnerOf(Pet pet) {
-        if(pet.getOwner().equals(getName())){
-            return true;
-        }
         return false;
     }
 
@@ -58,7 +55,11 @@ public class PetOwner {
      * @return the sum of ages of Pet objects stored in this class divided by the number of Pet object
      */
     public Float getAveragePetAge() {
-        return null;
+        Float sum = 6F;
+        for(Object pet : Pet){
+        //    pet.getAge
+        }
+        return sum;
     }
 
     /**
