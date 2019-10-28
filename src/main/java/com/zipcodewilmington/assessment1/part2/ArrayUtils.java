@@ -32,7 +32,7 @@ public class ArrayUtils {
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
         List<Object> objectList = new ArrayList<>();
         for(int i = 0; i <= objectArray.length - 1; i++){
-            if(objectArray[i].equals(objectToRemove)){
+            if(!objectArray[i].equals(objectToRemove)){
                 objectList.add(objectArray[i]);
             }
         }
@@ -65,6 +65,16 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-        return null;
+        Object[] mergedArray = new Object[objectArray.length + objectArrayToAdd.length];
+        Integer outsideCounter = 0;
+        for(int i = 0; i <= objectArray.length - 1; i++){
+            mergedArray[outsideCounter] = objectArray[i];
+            outsideCounter++;
+        }
+        for(int i = 0; i <= objectArrayToAdd.length - 1; i++){
+            mergedArray[outsideCounter] = objectArrayToAdd[i];
+            outsideCounter++;
+        }
+        return mergedArray;
     }
 }
