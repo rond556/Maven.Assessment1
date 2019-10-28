@@ -8,6 +8,8 @@ public class Dog extends Pet {
      * @param name name of this Dog
      * @param age age of this dog
      */
+        private String name;
+        private int age;
     public Dog(String name, Integer age) {
         name = "Name of Dog";
         age = Integer.MAX_VALUE;
@@ -34,6 +36,8 @@ public class Dog extends Pet {
      * age is 0
      */
     public Dog() {
+        this.name = "DogName";
+        this.age = 0;
     }
 
     /**
