@@ -13,7 +13,15 @@ public class RockPaperSissorsEvaluator {
      * @return the respective winning move
      */
     public String getWinningMove(String handSign) {
-        return null;
+        switch (handSign) {
+            case "rock":
+                return "paper";
+            case "paper":
+                return "scissor";//should be pluralized! Kept failing tests because of this!
+            case "scissors":
+                return "rock";
+        }
+        return "RTFM";
     }
 
     /**
@@ -21,7 +29,15 @@ public class RockPaperSissorsEvaluator {
      * @return the respective losing move
      */
     public String getLosingMove(String handSign) {
-        return null;
+        switch (handSign) {
+            case "rock":
+                return "scissor";
+            case "paper":
+                return "rock";
+            case "scissors":
+                return "paper";
+        }
+        return "RTFM";
     }
 
     /**
@@ -30,6 +46,19 @@ public class RockPaperSissorsEvaluator {
      * @return a string representative of the winning hand sign between the two players
      */
     public String getWinner(String handSignOfPlayer1, String handSignOfPlayer2) {
-        return null;
+        if(handSignOfPlayer1.equals("rock") && handSignOfPlayer2.equals("scissor")){
+            return handSignOfPlayer1;
+        } else if (handSignOfPlayer1.equals("scissor") && handSignOfPlayer2.equals("paper")){
+            return handSignOfPlayer1;
+        } else if (handSignOfPlayer1.equals("paper") && handSignOfPlayer2.equals("rock")){
+            return handSignOfPlayer1;
+        } else if (handSignOfPlayer1.equals("paper") && handSignOfPlayer2.equals("scissor")){
+            return handSignOfPlayer2;
+        } else if (handSignOfPlayer1.equals("scissor") && handSignOfPlayer2.equals("rock")){
+            return handSignOfPlayer2;
+        } else if (handSignOfPlayer1.equals("rock") && handSignOfPlayer2.equals("paper")){
+            return handSignOfPlayer2;
+        }
+        return "RTFM";
     }
 }
