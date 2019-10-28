@@ -10,6 +10,7 @@ public class Palindrome {
         //TWO EASY GREEN CHECKS!
         int count = input.length();
 
+
         return count;
     }
 }
