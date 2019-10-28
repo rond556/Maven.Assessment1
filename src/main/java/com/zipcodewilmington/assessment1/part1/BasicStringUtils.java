@@ -9,7 +9,13 @@ public class BasicStringUtils {
      * @return string with identical content, and the first character capitalized
      */
     public static String camelCase(String str) {
-        return null;
+        String capitalizedString = "";
+        capitalizedString += 
+        for(int i = 0; i <= str.length() -1; i++){
+            if()
+        }
+        return
+                ;
     }
 
     /**
