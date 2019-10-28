@@ -1,5 +1,8 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -11,7 +14,13 @@ public class ArrayUtils {
      * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
      */
     public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        return null;
+        int numberOfObjects = 0;
+        for(int i = 0; i <= objectArray.length - 1; i++){
+            if (objectArray[i].equals(objectToCount)) {
+                numberOfObjects += 1;
+            }
+        }
+        return numberOfObjects;
     }
 
     /**
@@ -21,13 +30,19 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        return null;
+        List<Object> objectList = new ArrayList<>();
+        for(int i = 0; i <= objectArray.length - 1; i++){
+            if(objectArray[i].equals(objectToRemove)){
+                objectList.add(objectArray[i]);
+            }
+        }
+        return objectList.toArray(new Object[objectList.size()]);
     }
 
     /**
      * @param objectArray an array of any type of Object
      * @return the most frequently occurring object in the array
-     * given an array of objects, named `objectArray` return the most frequently occuring object in the array
+     * given an array of objects, named `objectArray` return the most frequently occurring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
         return null;
@@ -37,7 +52,7 @@ public class ArrayUtils {
     /**
      * @param objectArray an array of any type of Object
      * @return the least frequently occurring object in the array
-     * given an array of objects, named `objectArray` return the least frequently occuring object in the array
+     * given an array of objects, named `objectArray` return the least frequently occurring object in the array
      */
     public static Object getLeastCommon(Object[] objectArray) {
         return null;
