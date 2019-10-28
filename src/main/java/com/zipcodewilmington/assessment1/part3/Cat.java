@@ -9,7 +9,7 @@ public class Cat extends Pet {
      * @param age age of this Cat
      */
     private String name;
-    private int age;
+    private Integer age;
 
 
     public Cat(String name, Integer age) {
@@ -20,7 +20,7 @@ public class Cat extends Pet {
     /**
      * @param age age of this Cat
      */
-    public Cat(Integer age) {
+    public Cat(Integer age) { this.age = age;
     }
 
     /**
