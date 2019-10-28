@@ -68,7 +68,7 @@ public class StringUtils {
     public static String removeCharacterAtIndex(String str, int index) {
         String removedLetterString = "";
         for (int i = 0; i <= str.length() - 1; i++) {
-            if(str.indexOf(i) != index) {
+            if(i != index) {
                 removedLetterString += str.charAt(i);
             }
         }
