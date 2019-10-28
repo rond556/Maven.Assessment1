@@ -12,19 +12,21 @@ public class PetOwner {
     private Object[] Pet;
 
     public PetOwner(String name, Pet... pets) {
+        this.name = name;
+        this.Pet = pets;
     }
 
     /**
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
+
     }
 
     /**
      * @param pet pet to be removed from the composite collection Pets
      */
     public void removePet(Pet pet) {
-
     }
 
     /**
@@ -32,7 +34,10 @@ public class PetOwner {
      * @return true if I own this pet
      */
     public Boolean isOwnerOf(Pet pet) {
-        return null;
+        if(pet.getOwner().equals(getName())){
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -42,14 +47,10 @@ public class PetOwner {
         return null;
     }
 
-
-
-
     /**
      * @return the age of the Pet object whose age field is the highest amongst all Pets in this class
      */
-    public Integer getOldestPetAge() {
-        return null;
+    public Integer getOldestPetAge() {return null;
     }
 
 
@@ -71,13 +72,13 @@ public class PetOwner {
      * @return the name property of the Pet
      */
     public String getName() {
-        return "Pet owner name";
+        return name;
     }
 
     /**
      * @return array representation of animals owned by this PetOwner
      */
     public Pet[] getPets() {
-        return null;
+        return (com.zipcodewilmington.assessment1.part3.Pet[]) Pet;
     }
 }
