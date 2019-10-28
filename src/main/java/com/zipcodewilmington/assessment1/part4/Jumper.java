@@ -6,6 +6,13 @@ public class Jumper {
      * Complete the function below.
      */
     public int jumps(int k, int j) {
-        return -1;
+
+        Integer numberOfKJumps = 0;
+        Integer numberOf1Jumps = 0;
+
+        numberOfKJumps = k / j;
+        numberOf1Jumps = k % j;
+
+        return numberOf1Jumps + numberOfKJumps;
     }
 }
