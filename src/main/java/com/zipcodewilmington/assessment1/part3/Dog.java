@@ -11,15 +11,14 @@ public class Dog extends Pet {
         private String name;
         private int age;
     public Dog(String name, Integer age) {
-        name = "Name of Dog";
-        age = Integer.MAX_VALUE;
+        this.name = name;
+        this.age = age;
     }
 
     /**
      * @param age age of this dog
      */
     public Dog(Integer age) {
-        age = Integer.MAX_VALUE;
     }
 
     /**

@@ -8,6 +8,9 @@ public class PetOwner {
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
      */
+    private String name;
+    private Object[] Pet;
+
     public PetOwner(String name, Pet... pets) {
     }
 
@@ -61,14 +64,14 @@ public class PetOwner {
      * @return the number of Pet objects stored in this class
      */
     public Integer getNumberOfPets() {
-        return null;
+        return Pet.length;
     }
 
     /**
      * @return the name property of the Pet
      */
     public String getName() {
-        return null;
+        return "Pet owner name";
     }
 
     /**
