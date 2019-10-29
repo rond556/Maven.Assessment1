@@ -50,23 +50,19 @@ public class ArrayUtils {
         int count = 0;
         int mostCommon = integerArray[0];
         int temp = 0;
-        for(int i = 0; i <= 9;i++){
+        int tempCount = 0;
+        for(int i = 0; i <= integerArray.length - 1;i++){
             temp = integerArray[i];
-            int tempCount = 0;
-            for(int j = 0; j <= integerArray.length - 1; j++){
-               if(temp == integerArray[j]){
-                   tempCount++;
-               }
+
+            tempCount = ArrayUtils.getNumberOfOccurrences(integerArray, temp);
             }
             if(tempCount > count){
                 mostCommon = temp;
                 count = tempCount;
+                tempCount = 0;
             }
-        }
         return mostCommon;
-    }
-
-
+        }
 
 
 
@@ -79,21 +75,18 @@ public class ArrayUtils {
         int count = Integer.MAX_VALUE;
         int leastCommon = integerArray[0];
         int temp = 0;
-        for(int i = 1; i <= 4;i++){
+        int tempCount = 0;
+        for(int i = 0; i <= integerArray.length - 1;i++){
             temp = integerArray[i];
-            int tempCount = 0;
-            for(int j = 0; j <= integerArray.length - 1; j++){
-                if(temp == integerArray[j]){
-                    tempCount++;
-                }
+            tempCount = ArrayUtils.getNumberOfOccurrences(integerArray, temp);
             }
             if(tempCount < count){
                 leastCommon = temp;
                 count = tempCount;
+                tempCount = 0;
             }
-        }
         return leastCommon;
-    }
+        }
 
     /**
      * @param objectArray      an array of any type of Object
