@@ -16,6 +16,14 @@ public abstract class Pet implements Animal {
         this.age = 0;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
     /**
      * @param name name of this pet
      */
@@ -61,7 +69,7 @@ public abstract class Pet implements Animal {
      * ensure this instance of `Pet` is added to the owner's composite `pets` list
      */
     public void setOwner(PetOwner newPetOwner) {
-        this.owner = newPetOwner;
+        ;
     }
 
     /**

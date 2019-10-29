@@ -55,11 +55,7 @@ public class PetOwner {
      * @return the sum of ages of Pet objects stored in this class divided by the number of Pet object
      */
     public Float getAveragePetAge() {
-        Float sum = 6F;
-        for(Object pet : Pet){
-        //    pet.getAge
-        }
-        return sum;
+        return null;
     }
 
     /**
