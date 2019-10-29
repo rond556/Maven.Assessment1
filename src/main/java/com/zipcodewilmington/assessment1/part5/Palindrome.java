@@ -10,6 +10,16 @@ public class Palindrome {
         //TWO EASY GREEN CHECKS!
         int count = input.length();
 
+        String reversedString = "";
+        //create a int to count up through array
+        int valueCounter = 0;
+        //use a forloop backwards through the array to create the reverse string
+        for (int i = 0; i <= input.length() - 1; i++) {
+            reversedString += input.charAt(valueCounter);
+            valueCounter++;
+        }
+
+
 
         return count;
     }
