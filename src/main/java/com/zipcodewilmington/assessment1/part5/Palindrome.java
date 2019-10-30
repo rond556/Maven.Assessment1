@@ -4,23 +4,36 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Palindrome {
-
-    public Integer countPalindromes(String input){
-        //at the very least, the length of the string will equal the count of the palindrome
-        //TWO EASY GREEN CHECKS!
+    //find all possiblesubStrings and just test them as palindromes
+    public Integer countPalindromes(String input) {
         int count = input.length();
-
-        String reversedString = "";
-        //create a int to count up through array
-        int valueCounter = 0;
-        //use a forloop backwards through the array to create the reverse string
-        for (int i = 0; i <= input.length() - 1; i++) {
-            reversedString += input.charAt(valueCounter);
-            valueCounter++;
-        }
-
+        List<String> substringArray = allPossibleSubstrings(input);
+        if(isPalindrome(substringArray))
+            count++;
 
 
         return count;
+    }
+    public boolean isPalindrome(List<String> substringArray) {
+        //create a string to reverse
+        ArrayList reversedString = new ArrayList();
+        int valueCounter = 0;
+        for (int i = substringArray.size() - 1; i >= 0; i--) {
+            reversedString.add(substringArray.get(valueCounter));
+            valueCounter++;
+        }
+        return substringArray.equals(reversedString);
+    }
+
+    public List<String> allPossibleSubstrings(String input){
+        List<String> allSubStrings = new ArrayList<>();
+        String tempSubString = "";
+        for(int i = 0; i <= input.length() - 1; i++){
+            for(int j = 0; j <= input.length() - 1; j++){
+                tempSubString = input.substring(i,i+j);
+                allSubStrings.add(tempSubString);
+            }
+        }
+        return allSubStrings;
     }
 }

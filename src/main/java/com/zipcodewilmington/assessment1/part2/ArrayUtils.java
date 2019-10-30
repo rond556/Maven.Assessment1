@@ -1,8 +1,6 @@
 package com.zipcodewilmington.assessment1.part2;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 /**
