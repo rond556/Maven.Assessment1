@@ -53,7 +53,6 @@ public class ArrayUtils {
         int tempCount = 0;
         for(int i = 0; i <= integerArray.length - 1;i++){
             temp = integerArray[i];
-
             tempCount = ArrayUtils.getNumberOfOccurrences(integerArray, temp);
             }
             if(tempCount > count){
@@ -76,18 +75,18 @@ public class ArrayUtils {
         int leastCommon = integerArray[0];
         int temp = 0;
         int tempCount = 0;
-        for(int i = 0; i <= integerArray.length - 1;i++){
+        for (int i = 0; i <= integerArray.length - 1; i++) {
             temp = integerArray[i];
             tempCount = ArrayUtils.getNumberOfOccurrences(integerArray, temp);
-            }
-            if(tempCount < count){
+
+            if (tempCount < count) {
                 leastCommon = temp;
                 count = tempCount;
                 tempCount = 0;
             }
-        return leastCommon;
         }
-
+        return leastCommon;
+    }
     /**
      * @param objectArray      an array of any type of Object
      * @param objectArrayToAdd an array of Objects to add to the first argument
