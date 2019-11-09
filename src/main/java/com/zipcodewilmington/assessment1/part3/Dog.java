@@ -19,7 +19,7 @@ public class Dog extends Pet {
     /**
      * @param age age of this dog
      */
-    public Dog(Integer age) { super.setAge(Integer.MAX_VALUE);
+    public Dog(Integer age) { super.setAge(age);
     super.setName("Dog name");
     }
 
